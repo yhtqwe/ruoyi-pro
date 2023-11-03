@@ -6,11 +6,21 @@
     <parent>
         <groupId>cn.iocoder.boot</groupId>
         <artifactId>yudao</artifactId>
-        <version>1.8.3-snapshot</version>
+        <version>${revision}</version>
     </parent>
 
     <groupId>org.example</groupId>
     <artifactId>yudao-module-demo</artifactId>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        测试一些模块，添加一些自己想要的功能
+    </description>
+    <modules>
+        <module>yudao-module-demo-api</module>
+        <module>yudao-module-demo-biz</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

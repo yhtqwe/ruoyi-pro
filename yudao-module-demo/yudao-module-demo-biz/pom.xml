@@ -6,10 +6,11 @@
     <parent>
         <groupId>org.example</groupId>
         <artifactId>yudao-module-demo</artifactId>
-        <version>1.8.3-snapshot</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>yudao-module-demo-biz</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,4 +18,45 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <name>${project.artifactId}</name>
+    <description>
+        demo模块，实现业务上的功能
+    </description>
+
+    <dependencies>  <!-- 5. 新增依赖，这里引入的都是比较常用的业务组件、技术组件 -->
+    <dependency>
+        <groupId>org.example</groupId>
+        <artifactId>yudao-module-demo-api</artifactId>
+        <version>${revision}</version>
+    </dependency>
+
+    <!-- 业务组件 -->
+    <dependency>
+        <groupId>cn.iocoder.boot</groupId>
+        <artifactId>yudao-spring-boot-starter-biz-operatelog</artifactId>
+    </dependency>
+
+    <!-- Web 相关 -->
+    <dependency>
+        <groupId>cn.iocoder.boot</groupId>
+        <artifactId>yudao-spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>cn.iocoder.boot</groupId>
+        <artifactId>yudao-spring-boot-starter-security</artifactId>
+    </dependency>
+
+    <!-- DB 相关 -->
+    <dependency>
+        <groupId>cn.iocoder.boot</groupId>
+        <artifactId>yudao-spring-boot-starter-mybatis</artifactId>
+    </dependency>
+
+    <!-- Test 测试相关 -->
+    <dependency>
+        <groupId>cn.iocoder.boot</groupId>
+        <artifactId>yudao-spring-boot-starter-test</artifactId>
+    </dependency>
+</dependencies>
 </project>
